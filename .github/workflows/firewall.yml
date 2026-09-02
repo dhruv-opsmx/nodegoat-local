@@ -63,7 +63,7 @@ jobs:
       uses: actions/github-script@v7
       with:
         script: |
-          const { createPRComment } = require('./.github/scripts/pr-comment-script.js');
+          const { createPRComment } = require('./.github/workflows/scripts/pr-comment-script.js');
           
           const secrets = {
             GITHUB_SERVER_URL: '${{ github.server_url }}',
@@ -79,7 +79,7 @@ jobs:
       uses: actions/github-script@v7
       with:
         script: |
-          const { showArtifactInfo } = require('./.github/scripts/pr-comment-script.js');
+          const { showArtifactInfo } = require('./.github/workflows/scripts/pr-comment-script.js');
           
           const secrets = {
             GITHUB_SERVER_URL: '${{ github.server_url }}',
@@ -87,4 +87,8 @@ jobs:
             SSD_UPLOAD_URL: '${{ secrets.SSD_UPLOAD_URL }}'
           };
           
+<<<<<<< HEAD
           showArtifactInfo(context, secrets);
+=======
+          showArtifactInfo(context, secrets);
+>>>>>>> ff3c788af5e005fb77b6c69b93ede8404ed0e4fd
