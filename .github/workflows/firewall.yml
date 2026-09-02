@@ -87,3 +87,6 @@ jobs:
             SSD_UPLOAD_URL: '${{ secrets.SSD_UPLOAD_URL }}'
           };
 
+          showArtifactInfo(context, secrets);
+
+
