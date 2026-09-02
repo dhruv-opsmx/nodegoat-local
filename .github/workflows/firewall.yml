@@ -63,7 +63,7 @@ jobs:
       uses: actions/github-script@v7
       with:
         script: |
-          const { createPRComment } = require('./.github/scripts/pr-comment-script.js');
+          const { createPRComment } = require('./.github/workflows/scripts/pr-comment-script.js');
           
           const secrets = {
             GITHUB_SERVER_URL: '${{ github.server_url }}',
