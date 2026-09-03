@@ -34,7 +34,7 @@ jobs:
           set -e
 
           curl -L -f -o ssd-scanner-cli \
-            https://github.com/OpsMx/ssd-scanner-cli-public/releases/download/v0.5.11/ssd-scanner-cli-amd64
+            https://github.com/OpsMx/ssd-scanner-cli-public/releases/download/v0.6.9/ssd-scanner-cli-amd64
 
           chmod +x ssd-scanner-cli
 
@@ -71,7 +71,7 @@ jobs:
           echo "Running diff-scan for Pull Request #${{ github.event.number }}"
 
           ./ssd-scanner-cli \
-            --scanners=trivy,syft \
+            --scanners=trivy,syft,opengrep,semgrep \
             --trivy-scanners=codelicensescan,codesecretscan \
             --syft-scanners=sourcecodesbom \
             --repository-url="${{ github.server_url }}/${{ github.repository }}" \
